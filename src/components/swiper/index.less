@@ -1,0 +1,64 @@
+.swiper {
+    position: relative;
+    .slide-more {
+        text-align: center;
+        img {
+            width: 2.36rem;
+            margin: 0 auto;
+            margin-bottom: .09rem;
+        }
+    }
+    :global {
+        .am-pagination {
+            position: absolute;
+            bottom: 0.65rem;
+            width: 100%;
+        }
+        .am-pagination-wrap-dot {
+            margin: 0 5px
+        }
+        .am-pagination-wrap-dot>span {
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #fff;
+            opacity: .2;
+        }
+        .am-pagination-wrap-dot-active>span {
+            opacity: 1;
+            background: #fabe00;
+            border-radius: 2px;
+            width: 8px;
+            height: 4px;
+        }
+    }
+    .next {
+        width: .225rem;
+        height: .225rem;
+        background-image: url(imageAssets/download/next.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        -webkit-transform: translateX(-.1125rem);
+        -ms-transform: translateX(-.1125rem);
+        transform: translateX(-.1125rem);
+    }
+    .totop {
+        width: .3375rem;
+        height: .3375rem;
+        position: absolute;
+        right: .225rem;
+        bottom: .45rem;
+        background-image: url('imageAssets/download/totop.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+}
+
+// .swiper-pagination.swiper-pagination-bullets {
+//     bottom: .65rem;
+// }

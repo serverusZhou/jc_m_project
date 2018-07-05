@@ -1,0 +1,586 @@
+.annual-meeting-wrap {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrap {
+    overflow: hidden;
+    .ql-size-12 {
+        font-size: 12px;
+    }
+    .ql-size-14 {
+        font-size: 14px;
+    }
+    .ql-size-16 {
+        font-size: 16px;
+    }
+    .ql-size-18 {
+        font-size: 18px;
+    }
+    .ql-size-20 {
+        font-size: 20px;
+    }
+    .top {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+    .live {
+        margin-bottom: .1rem;
+    }
+    .live-player,
+    .new-activity-model {
+        height: 100%;
+        padding: 0 .08rem;
+        padding-top: 2.08rem;
+        position: relative;
+        background-size: 100% !important;
+        .live-status {
+            font-size: 10px;
+            position: absolute;
+            color: #FFF;
+            z-index: 2;
+            background: rgba(1, 1, 1, .2);
+            border-radius: .02rem;
+            left: 0;
+            right: 0;
+            top: 2.18rem;
+            margin: auto;
+            width: 66px;
+            text-align: center;
+            padding: .03rem .05rem;
+            .status-dot {
+                display: inline-block;
+                border-radius: 50%;
+                margin-right: .02rem;
+                width: 8px;
+                height: 8px;
+            }
+        }
+        .liveLeftTime {
+            /* 直播剩余开播时间 */
+            position: absolute;
+            top: .76rem;
+            left: 50%;
+            color: #FFC825;
+            z-index: 2;
+            width: 1.68rem;
+            background: rgba(0, 0, 0, .3);
+            padding: .02rem .1rem;
+            height: .13rem;
+            line-height: .13rem;
+            font-size: 12px;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -ms-: translate(-50%, 0);
+            -o-: translate(-50%, 0);
+            text-align: center;
+            border-radius: .05rem;
+            font-weight: bold;
+            .LCDMono {
+                font-family: 'LCDMono' !important;
+            }
+        }
+        .player-box {
+            padding: .02rem;
+            background: #222;
+            .vjs-melephant .vjs-melephant-error .content-wrap {
+                margin-top: -1.6rem;
+            }
+            .vjs-melephant .vjs-melephant-loading .content-wrap {
+                margin-top: -1.45rem;
+            }
+            .vjs-melephant .vjs-melephant-ended .content-wrap {
+                margin-top: -1.6rem;
+            }
+        }
+    }
+    .new-activity-model {
+        padding-top: .694rem;
+        .live-status {
+            top: .8rem;
+        }
+    }
+    .likeWatch {
+        text-align: center;
+        background: #E3E3E3;
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px solid #DCDCDC;
+        &>div {
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+        }
+        .likeNum {
+            margin-left: 14px;
+            float: left;
+            height: 48px;
+            overflow: hidden;
+            &>li {
+                color: #FFC825;
+                font-size: 16px;
+            }
+        }
+        .text {
+            color: #161616;
+            font-size: 12px;
+            height: 48px;
+            line-height: 48px;
+            float: left;
+        }
+        .likeBtn {
+            float: right;
+            margin-top: 10px;
+            margin-right: 12px;
+            background-size: 100% 100%;
+            width: 97px;
+            height: 26px;
+            border: 1px solid #FFC825;
+            border-radius: 30px;
+            position: relative;
+            color: #1E1E1E;
+            .icon {
+                float: left;
+                width: 17px;
+                height: 16px;
+                margin-top: 3px;
+                margin-left: 10px;
+                background: url("imageAssets/indexChannel/likeWatch.png") no-repeat center;
+                background-size: 100%;
+                position: relative;
+                top: 3px;
+                margin-right: 2px;
+            }
+            &.clicked {
+                .icon {
+                    background: url("imageAssets/indexChannel/likeWatch_on.png") no-repeat center;
+                    background-size: 100%;
+                }
+            }
+            .info {
+                float: left;
+                margin-left: 5px;
+                font-size: 13px;
+                height: 26px;
+                line-height: 26px;
+            }
+            .alertInfo,
+            .show-info {
+                display: none;
+                width: 116px;
+                height: 32px;
+                line-height: 34px;
+                font-size: 10px;
+                color: #FFF;
+                background: url("imageAssets/indexChannel/alert_info_bg.png") no-repeat center;
+                background-size: 100%;
+                position: absolute;
+                top: 26px;
+                left: -10px;
+                span {
+                    position: relative;
+                    top: 1.5px;
+                    /* top: 1.15px; */
+                }
+            }
+            .show-info {
+                display: block;
+            }
+        }
+    }
+    .livePlaying {
+        text-align: center;
+        background: #E3E3E3;
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px solid #DCDCDC;
+        &>div {
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+        }
+        .watchNum {
+            margin-left: 14px;
+            float: left;
+            height: 48px;
+            overflow: hidden;
+            &>li {
+                color: #FFC825;
+                font-size: 16px;
+            }
+        }
+        .text {
+            color: #161616;
+            font-size: 12px;
+            height: 48px;
+            line-height: 48px;
+            float: left;
+        }
+        .live-time-status {
+            float: right;
+            margin-right: 12px;
+            background-size: 100% 100%;
+            width: 97px;
+            height: 100%;
+            color: #1E1E1E;
+            .live-background {
+                float: left;
+                width: 33px;
+                height: 100%;
+                background: url("imageAssets/indexChannel/live_time_icon.png") no-repeat center;
+                background-size: 100%;
+            }
+            .info {
+                float: left;
+                font-size: 13px;
+                height: 100%;
+                width: 52px;
+                line-height: 48px;
+            }
+        }
+    }
+    .live-off {
+        text-align: center;
+        background: #E3E3E3;
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px solid #DCDCDC;
+        &>div {
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+        }
+        .watched-num {
+            margin-left: 14px;
+            float: left;
+            height: 48px;
+            overflow: hidden;
+            &>li {
+                color: #FFC825;
+                font-size: 16px;
+            }
+        }
+        .text {
+            color: #161616;
+            font-size: 12px;
+            height: 48px;
+            line-height: 48px;
+            float: left;
+        }
+        .live-time-status {
+            float: right;
+            margin-right: 12px;
+            background-size: 100% 100%;
+            width: 97px;
+            height: 100%;
+            color: #1E1E1E;
+            .live-background {
+                float: left;
+                width: 18px;
+                margin-right: 8px;
+                margin-left: 4px;
+                height: 100%;
+                background: url("imageAssets/indexChannel/live_end_icon.png") no-repeat center;
+                background-size: 100%;
+            }
+            .info {
+                float: left;
+                font-size: 13px;
+                height: 100%;
+                line-height: 48px;
+            }
+        }
+    }
+    .bgWrap {
+        height: 100%;
+        background-size: contain !important;
+    }
+    .live {}
+    .signals {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0 .06rem;
+        display: flex;
+        li {
+            flex: 1;
+            width: .85rem;
+            height: .4rem;
+            overflow: hidden;
+            line-height: .4rem;
+            margin: .06rem .03rem .09rem;
+            background: #151824;
+            color: #FFF;
+            font-size: 14px;
+            text-align: center;
+            .is-active {
+                color: #FABE00;
+            }
+        }
+    }
+    .desc,
+        {
+        height: auto;
+        background: #FFF;
+        color: #222;
+        font-size: 12px;
+        line-height: .16rem;
+        padding: .22rem .15rem .35rem;
+        box-sizing: border-box;
+        .is-click {
+            i {
+                background: url(imageAssets/activity/t-point.png) center center no-repeat;
+                background-size: contain;
+            }
+        }
+        .more {
+            display: inline-block;
+            float: right;
+            width: .43rem;
+            height: .12rem;
+            margin-top: .1rem;
+        }
+        i {
+            display: inline-block;
+            width: .08rem;
+            height: .06rem;
+            background: url(imageAssets/activity/b-point.png) center center no-repeat;
+            background-size: contain;
+            margin-left: 3px;
+        }
+        >div {
+            display: none;
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+    .modules {
+        margin-bottom: .1rem;
+    }
+    .hide {
+        display: none;
+    }
+    .cover-page-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: 100% 100% !important;
+        &.clicked {
+            display: none;
+        }
+        .to-nav-page {
+            width: 1.63rem;
+            height: 1rem;
+            position: absolute;
+            bottom: .3rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+        }
+    }
+    .nav-page {
+        display: none;
+        color: #FFF;
+        overflow-y: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        -webkit-overflow-scrolling: touch;
+        &>div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 9;
+            transition: left .5s, right .5s;
+            -webkit-transition: left .5s, right .5s;
+            -moz-transition: left .5s, right .5s;
+            -o-transition: left .5s, right .5s;
+        }
+    }
+    .asideBox {
+        z-index: 20;
+        background: #000;
+    }
+    .asideBox.toLeft {
+        left: -3.75rem;
+        right: 3.75rem;
+    }
+    .asideBox>ul {
+        /* background: #2C2846; */
+        li {
+            line-height: .6rem;
+            text-align: left;
+            font-size: .18rem;
+            height: 1rem;
+            font-family: 'SimHei';
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .playing-cover-show {
+        display: block;
+    }
+    .playing-cover,
+    .playing-cover-show {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: auto;
+        background: rgba(0, 0, 0, .5);
+        width: 100%;
+        height: 100%;
+        .player-box {
+            width: 100%;
+            height: 2.14rem;
+            /* 2.11? */
+            background: #666;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1.07rem;
+            .closePlayer {
+                position: absolute;
+                right: .1rem;
+                top: -.5rem;
+                width: .4rem;
+                height: .4rem;
+                z-index: 9999;
+                background: url("imageAssets/annualMeeting/img_close.png") no-repeat;
+                background-size: 100%;
+                border-radius: 50%;
+            }
+            .video-player,
+            .video-js,
+            .vjs-user-inactive,
+            video {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .2s;
+    }
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
+    }
+    .video-player,
+    .video-js,
+    .vjs-user-inactive,
+    video {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* new */
+
+/* new */
+
+/* new */
+
+/* new */
+
+/* new */
+
+/* new */
+
+/* new */
+
+/* new */
+
+/* new */
+
+.model-box {
+    margin: 0 .08rem;
+    font-size: 12px;
+    background: rgba(255, 255, 255, .6);
+    background-size: 100% auto !important;
+    img {
+        border-radius: .04rem;
+    }
+}
+
+.videoBox,
+    {
+    padding: 0 .08rem .1rem;
+    box-sizing: border-box;
+    .row {
+        width: 100%;
+    }
+    .col,
+    .col-2,
+    .col-v {
+        display: inline-block;
+        overflow: hidden;
+        display: inline-block;
+        margin-top: .12rem;
+        border-radius: .04rem;
+        vertical-align: top;
+        a {
+            display: block;
+        }
+        img {
+            overflow: hidden;
+            display: block;
+            width: 100%;
+            height: .95rem;
+        }
+        .video-content {
+            background: #FFFFFF;
+        }
+        .name,
+        .subname {
+            width: 1.55rem;
+            padding: .06rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .name {
+            font-weight: bold;
+        }
+        .subname {
+            color: #9B9B9B;
+            padding-top: 0;
+        }
+    }
+    .col-2 {
+        width: 1.69rem;
+        margin-left: 0.05rem;
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+    .col-v {
+        height: auto;
+        padding-bottom: .05rem;
+        img {
+            height: 2.53rem;
+        }
+    }
+}

@@ -1,0 +1,160 @@
+.check-all {
+    width: 3.43rem;
+    height: .45rem;
+    line-height: .45rem;
+    margin: .06rem auto;
+    text-align: center;
+    color: #FABE00;
+    background: #F4F4F4;
+    border-radius: .06rem;
+}
+
+.video-list {
+    margin-top: .5rem;
+    background: #FFF;
+}
+.video-card {
+    overflow: hidden;
+    clear: both;
+    padding: .14rem 0 .14rem .16rem;
+}
+.video-item {
+    border-bottom: .01rem solid #E6E6E6;
+}
+
+.video-poster {
+    float: left;
+    display: inline-block;
+    width: 1.05rem;
+    height: 1.58rem;
+    background: #CCC;
+    img {
+        width: 1.05rem;
+        height: 1.58rem;
+        border-radius: .04rem;
+        /*  搜索页图片圆角  */
+    }
+    a {
+        display: block;
+    }
+}
+
+.video-info {
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 2.18rem;
+    height: 1.58rem;
+    margin-left: .09rem;
+    h3 {
+        padding: .02rem 0;
+        font-size: .14rem;
+        font-weight: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    p {
+        font-size: .12rem;
+        line-height: 1.5;
+        color: #9D9D9D;
+        overflow: hidden;
+    }
+    .summary {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* webpack 不能编译这个属性，要用如下方法 */
+        /*! autoprefixer: off */
+        -webkit-box-orient: vertical;
+        /* autoprefixer: on */
+    }
+    .source {
+        padding: .07rem 0;
+        img {
+            width: .15rem;
+            vertical-align: middle;
+            margin-top: -0.02rem;
+        }
+    }
+    .actor {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .play {
+        position: absolute;
+        bottom: 0;
+        height: .32rem;
+        line-height: .32rem;
+        padding: 0 .12rem;
+        font-size: .13rem;
+        text-align: center;
+        color: #FFF;
+        background: #FABE00;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        img {
+            width: .1rem;
+            height: .11rem;
+            padding-right: .04rem;
+            vertical-align: baseline;
+        }
+        a {
+            display: inline-block;
+            width: 100%;
+            height: .32rem;
+        }
+    }
+    .play:active {
+        background: #EDB400;
+    }
+}
+
+.episode-list {
+    padding: 0 .16rem .12rem;
+    li {
+        display: inline-block;
+        width: .53rem;
+        height: .53rem;
+        margin: 0 .04rem .04rem 0;
+        text-align: center;
+        background: #F2F3F6;
+        border-radius: 6px;
+        a {
+            line-height: 1.2;
+            display: block;
+            position: relative;
+            top: 52%;
+            transform: translateY(-50%);
+        }
+    }
+    .episode-list-li {
+        line-height: .53rem;
+    }
+    .time-item {
+        width: 3.33rem;
+        height: 0.45rem;
+        padding-left: 0.1rem;
+        margin-bottom: 0.06rem;
+        text-align: left;
+        color: #272727;
+    }
+    .check-more {
+        width: 3.43rem;
+        height: .45rem;
+        line-height: .45rem;
+        margin: 0 auto;
+        text-align: center;
+        color: #FABE00;
+        background: #F4F4F4;
+        border-radius: .06rem;
+    }
+}
+
+.episode-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

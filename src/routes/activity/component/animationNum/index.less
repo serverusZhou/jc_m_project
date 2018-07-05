@@ -1,0 +1,59 @@
+.animation-num-box {
+    height: 0.48rem;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.animation-num {
+    transition: margin .5s;
+    -webkit-transition: margin .5s;
+    -o-transition: margin .5s;
+    -ms-transition: margin .5s; // float: left;
+    display: block;
+    &>li {
+        width: 100%;
+        height: 0.48rem;
+        vertical-align: top;
+        clear: both;
+    }
+}
+
+.generate-currentNum(9);
+.generate-currentNum(@n, @i: 0) when (@i =< @n) {
+    .currentNum-@{i} {
+        .animation-num();
+        margin-top: @i *-0.48rem;
+    }
+    .generate-currentNum(@n, (@i + 1));
+}
+
+// .currentNum0 {
+//     .animation-num ();
+// }
+// .currentNum1 {
+//     margin-top: -48px;
+// }
+// .currentNum2 {
+//     margin-top: -96px;
+// }
+// .currentNum3 {
+//     margin-top: -144px;
+// }
+// .currentNum4 {
+//     margin-top: -192px;
+// }
+// .currentNum5 {
+//     margin-top: -240px;
+// }
+// .currentNum6 {
+//     margin-top: -288px;
+// }
+// .currentNum7 {
+//     margin-top: -336px;
+// }
+// .currentNum8 {
+//     margin-top: -384px;
+// }
+// .currentNum9 {
+//     margin-top: -432px;
+// }

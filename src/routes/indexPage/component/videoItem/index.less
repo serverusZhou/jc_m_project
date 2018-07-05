@@ -1,0 +1,140 @@
+.video-list {
+  position: relative;
+  padding: .05rem 0 .08rem;
+  overflow-x: hidden;/* 8号模板滚动新增样式 */
+  overflow-y: hidden;/* 8号模板滚动新增样式 */
+  .videos-list-title-wrap {
+    padding: .05rem;
+    overflow: hidden;
+    .videos-list-title-icon {
+      width: .3rem;
+      height: .3rem;
+      float: left;
+      margin-right: .05rem;
+    }
+    .videos-list-title {
+      float: left;
+      color: #111;
+      font-size: .16rem;
+      line-height: .3rem;
+      width: 3rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &.new-model {
+        font-size: .17rem;
+      }
+    }
+  }
+
+
+  .list-black-bg {
+    width: 3.65rem;
+    height: .01rem;
+    background-color: #EEE;
+    margin-bottom: .06rem;
+    margin-left: .05rem;
+  }
+  & > .new-model-header-img {
+    height: 1.82rem;
+    .list-black-bg {
+      margin-bottom: .22rem;
+    }
+    & img {
+      width: 3.65rem;
+      height: 1.4rem;
+      margin-left: .05rem;
+      border-radius: .04rem;
+    }
+  }
+  .list-line {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #EBEBEB;
+    width: 98%;
+    height: 1px;
+  }
+  .videos-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 .03rem;
+  }
+  .videos-layOut1-wrap,
+  .videos-layOut2-wrap,
+  .videos-layOut3-wrap,
+  .videos-layOut4-wrap,
+  .videos-layOut5-wrap,
+  .videos-layOut6-wrap,
+  .videos-layOut7-wrap,
+  .videos-layOut8-wrap {
+    margin-top: .1rem;
+  }
+  .videos-layOut8-wrap {
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    margin-bottom: .08rem;
+    & > a:first-child {
+      display: inline-block;
+      width: 1.76rem;
+      height: 1.01rem;
+      margin-left: .05rem;
+    }
+    & > a {
+      display: inline-block;
+      width: 1.76rem;
+      height: 1.01rem;
+      margin-right: .05rem;
+    }
+  }
+  .videos-layOut8-wrap,
+  .videos-layOut9-wrap {
+    margin-top: .1rem;
+  }
+  .bottomBtns {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    padding: 0  .03rem;
+    height: .4rem;
+    .moreVideos,.otherPage {
+      flex: 1;
+      -webkit-flex: 1;
+      font-size: .16rem;
+      color: rgb(253, 189, 1);
+      font-weight: bold;
+      text-align: center;
+      
+    }
+    img {
+      position: relative;
+      top: .05rem;
+      width: .3rem;
+      height: .3rem;
+      margin-right: .1rem;
+    }
+    span {
+      position: relative;
+      top: -.04rem;
+    }
+    .moreVideos {
+      display: inline-block;
+      padding-left: .3rem;
+    }
+    .otherPage {
+      padding-right: .3rem;
+    }
+    .verticalLine {
+      display: inline-block;
+      margin-top: .1rem;
+      width: .01rem;
+      height: .2rem;
+      background-color: #E8E8E8;
+    }
+  }
+}

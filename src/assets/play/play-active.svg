@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>播放高亮</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="播放页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.47074564,3.12678152 C6.8674756,0.747035772 9.13168641,0.74646347 10.5287523,3.12678152 L16.1422742,12.6910892 C17.5390042,15.0708349 16.427536,17 13.6672789,17 L2.33221901,17 C-0.431413131,17 -1.53984219,15.0714072 -0.142776325,12.6910892 L5.47074564,3.12678152 Z" id="播放高亮" fill="#FABE00" transform="translate(8.000000, 9.000000) rotate(90.000000) translate(-8.000000, -9.000000) "></path>
+    </g>
+</svg>

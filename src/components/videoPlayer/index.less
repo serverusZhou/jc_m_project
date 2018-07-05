@@ -1,0 +1,284 @@
+.videoPlayer {
+    height: 100%;
+    width: 100%; // :global {
+    :global {
+        /* ------------------ 公共 ------------------ */
+        .common-color {
+            color: #F0BD32;
+        }
+        .vjs-melephant .vjs-big-play-button,
+        .vjs-melephant .vjs-control-bar,
+        .vjs-melephant .vjs-control-bar .vjs-fullscreen-control {
+            .vjs-icon-placeholder:before {
+                display: none;
+                visibility: hidden;
+                content: '';
+            }
+        }
+        /* ------------------ 公共 ------------------ */
+        /* ------------------ 大播放按钮 ------------------ */
+        .vjs-melephant .vjs-big-play-button {
+            border: none;
+            background: rgba(0, 0, 0, 0.5);
+            width: .5rem;
+            height: .5rem;
+            top: 50%;
+            left: 50%;
+            line-height: .5rem;
+            border-radius: 50%;
+            margin-left: -.25rem;
+            margin-top: -.25rem;
+        }
+        .vjs-melephant .vjs-big-play-button:before {
+            .common-color();
+            font-family: 'iconfont';
+            content: '\e640';
+            font-size: .25rem;
+            line-height: .5rem;
+        }
+        /* ------------------ 大播放按钮 ------------------ */
+        /* ------------------ 控制条 ------------------ */
+        /* 播放按钮, 暂停按钮 */
+        .vjs-melephant .vjs-control-bar {
+            &:before {
+                .common-color();
+                font-size: .22rem;
+                line-height: .32rem;
+            }
+            /* 播放按钮, 暂停按钮 */
+            .vjs-playing:before {
+                .common-color();
+                font-family: 'iconfont';
+                content: '\e622';
+            }
+            /* 暂停按钮 */
+            .vjs-paused:before {
+                .common-color();
+                font-family: 'iconfont';
+                content: '\e640'; // display: flex;
+                // justify-content: center;
+                // align-items: center;
+            }
+        }
+        /* 全屏按钮 */
+        .vjs-melephant .vjs-control-bar .vjs-fullscreen-control:before {
+            font-family: 'iconfont';
+            content: '\e61c';
+            color: #fff;
+        }
+        //进度条
+        .vjs-melephant .vjs-current-time{
+            display: block;
+        }
+
+        /* 声音 */
+        // .vjs-melephant .vjs-mute-contro {
+        //     &::before {
+        //         content: "\F107"
+        //     }
+        // }
+        // .video-js .vjs-mute-control,
+        // .video-js .vjs-volume-menu-button {
+        //     color: #F0BD32;
+        // } 
+        
+
+        /* ------------------ 控制条 ------------------ */
+        /* ------------------ 错误提示 ------------------ */
+        /* 将老的给干掉，应该能用js框架原生的干掉，但是根据官网的写法不成功，先用css */
+        .vjs-melephant .vjs-error-display {
+            display: none;
+        }
+        .vjs-melephant .vjs-melephant-error {
+            height: 100%;
+            position: relative;
+        }
+        /* 自定义的 */
+        .vjs-melephant .vjs-melephant-error .content-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1.9rem;
+            height: 1.2rem;
+            margin-left: -.95rem;
+            margin-top: -.6rem;
+            border-radius: .07rem;
+            text-align: center;
+            background: rgba(0, 0, 0, .8);
+            padding: .3rem;
+            color: #A3A3A3;
+        }
+        .vjs-melephant .vjs-melephant-error .error-reload {
+            color: #FABE00;
+            font-size: .14rem;
+            margin-top: .2rem;
+        }
+        .vjs-melephant .vjs-melephant-error .error-reload i {
+            font-size: .14rem;
+            margin-right: .05rem;
+        }
+        content: "\E631";
+        /* ------------------ 错误提示 ------------------ */
+        /* ------------------ 加载中 ------------------ */
+        // 加载中图片
+        .vjs-melephant .vjs-melephant-loading {
+            position: relative;
+            height: 100%;
+        }
+        .vjs-melephant .vjs-melephant-loading .loading-gif {
+            display: block;
+            width: .9rem;
+            height: .9rem;
+        }
+        .vjs-melephant .vjs-melephant-loading .content-wrap {
+            position: absolute;
+            /*top: calc(50% - .45rem);*/
+            /*left: calc(50% - .45rem);*/
+            top: 50%;
+            left: 50%;
+            margin-left: -.45rem;
+            margin-top: -.45rem;
+            p {
+                text-align: center;
+                margin-top: .1rem;
+            }
+            /*transform: translate(-50%, -50%);*/
+        }
+        /* ------------------ 加载中 ------------------ */
+    }
+
+
+
+
+            
+        // .vjs-icon-play:before,
+        // .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+        // .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before,
+        // .video-js .vjs-play-control .vjs-icon-placeholder:before {
+        //     display: none !important;
+        //     content: '' !important;
+        // }
+        // /* control bar 高度位置 */
+        // .vjs-melephant .vjs-control-bar {
+        //     height: .3rem;
+        //     color: #666;
+        //     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        // }
+        // .vjs-melephant .vjs-control-bar .vjs-playing,
+        // .vjs-melephant .vjs-control-bar .vjs-paused {
+        //     // margin-left: .1rem;
+        // }
+        // /* 播放结束后 */
+        // .vjs-melephant .vjs-melephant-ended .content-wrap {
+        //     position: relative;
+        //     top: 6%;
+        //     border-radius: .07rem;
+        //     text-align: center;
+        //     background: rgba(0, 0, 0, .8);
+        //     padding: .2rem .3rem;
+        //     color: #A3A3A3;
+        // }
+        // .vjs-melephant .vjs-melephant-ended i {
+        //     font-size: .14rem;
+        //     margin-left: .06rem;
+        // }
+        // .vjs-melephant .vjs-melephant-ended .end-text {
+        //     display: block;
+        //     line-height: .2rem;
+        // }
+        // .vjs-melephant .vjs-melephant-ended .end-link {
+        //     font-size: .14rem;
+        //     border-radius: .2rem;
+        //     letter-spacing: .02rem;
+        //     color: #FABE00;
+        //     margin-top: .1rem;
+        // }
+        // .vjs-melephant .vjs-time-control {
+        //     line-height: .3rem;
+        // }
+        // /* 让hover区域大点 */
+        // .vjs-melephant .vjs-progress-control.vjs-control {
+        //     height: .08rem;
+        // }
+        // /* 进度条左右外边距 */
+        // .vjs-melephant .vjs-progress-control .vjs-progress-holder {
+        //     margin: 0;
+        // }
+        // /* 进度条 */
+        // .vjs-melephant .vjs-progress-control {
+        //     margin-top: .11rem;
+        // }
+        // /* 进度条底色 */
+        // .vjs-melephant .vjs-progress-holder.vjs-slider {
+        //     background: rgba(255, 255, 255, 0.3);
+        // }
+        // /* 进度条已加载 */
+        // .vjs-melephant .vjs-load-progress div {
+        //     background: rgba(255, 255, 255, 0.5);
+        // }
+        // /* 进度条已播放 */
+        // .vjs-melephant .vjs-play-progress {
+        //     background-color: #F0BD32;
+        // }
+        // /* 进度条已播放圆点 */
+        // .vjs-melephant .vjs-play-progress:before,
+        // .vjs-melephant .vjs-progress-control:hover .vjs-play-progress:before {
+        //     display: block;
+        //     color: #F0BD32;
+        //     font-size: .12rem;
+        //     top: -.04rem;
+        //     background-color: #F0BD32;
+        //     border-radius: 100%;
+        //     box-shadow: 0 0 .03rem 0 rgba(0, 0, 0, .5);
+        // }
+        // /* 鼠标移到进度条时间框 */
+        // .vjs-melephant .vjs-progress-control .vjs-mouse-display:after {
+        //     display: none;
+        // }
+        // /* 去掉默认已播放时间 */
+        // .vjs-melephant .vjs-progress-control:hover .vjs-play-progress:after {
+        //     display: none;
+        // }
+        // .vjs-melephant .vjs-current-time,
+        // .vjs-melephant .vjs-duration {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     font-size: .12rem;
+        //     color: #fff;
+        // }
+        // /* 各个状态进度条 */
+        // .vjs-melephant .vjs-progress-holder,
+        // .vjs-melephant .vjs-load-progress,
+        // .vjs-melephant .vjs-play-progress.vjs-slider-bar,
+        // .vjs-melephant .vjs-progress-control .vjs-load-progress div {
+        //     height: .03rem;
+        // }
+        // .vjs-melephant .vjs-progress-holder,
+        // .vjs-melephant .vjs-play-progress.vjs-slider-bar,
+        // .vjs-melephant .vjs-progress-control .vjs-load-progress div {
+        //     border-radius: .06rem;
+        // }
+        // .vjs-melephant .vjs-load-progress {
+        //     border-radius: .06rem 0 0 .06rem;
+        // }
+        // .vjs-melephant .vjs-m-fullscreen {
+        //     position: relative;
+        //     width: 100%;
+        //     height: 88%;
+        //     /*display: flex;*/
+        //     /*justify-content: center;*/
+        //     /*align-items: center;*/
+        //     /*flex-direction: column;*/
+        // }
+        // /* 微调播放器上切换分辨率的样式 */
+        // // .vjs-melephant .vjs-resolution-button .vjs-resolution-button-label {
+        // .vjs-melephant .vjs-resolution-button {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        // }
+        // .vjs-melephant .vjs-remaining-time-display {
+        //     color: #fff;
+        // }
+}

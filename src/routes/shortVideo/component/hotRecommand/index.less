@@ -1,0 +1,58 @@
+.listTitle {
+    height: .22rem;
+    margin-top: .18rem;
+    margin-bottom: .16rem;
+    line-height: .36rem;
+    text-align: center;
+  }
+  
+  .video-list {
+    /* padding-bottom: .24rem; */
+    .video-box {
+      width: 1.87rem; /* old 1.82; */
+      height: 2.42rem;
+      display: inline-block;
+      position: relative;
+      background-size: 100% !important;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .video-box:nth-child(2n) {
+      margin-left: .01rem; /* .1 */
+    }
+    .cover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: .5rem;
+      height: .5rem;
+      line-height: .5rem;
+      text-align: center;
+      background: rgba(0, 0, 0, .5);
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    .more {
+      width: 100%;
+      height: .54rem;
+      line-height: .54rem;
+      text-align: center;
+      color: #464851;
+    }
+    .listSingleVideoTitle {
+      height: .2rem;
+      width: 1.75rem;
+      line-height: .2rem;
+      padding: .06rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }

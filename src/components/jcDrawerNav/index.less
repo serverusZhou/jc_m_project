@@ -1,0 +1,85 @@
+.my-drawer {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    :global {
+        .am-drawer-sidebar {
+            background-color: #fff;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        } // .am-drawer-sidebar .am-list {
+        //     width: 300px;
+        //     padding: 0;
+        // }
+        .am-drawer-sidebar .am-list {
+            padding: 0;
+            width: 1.6rem;
+            height: 100%;
+            background: #fff; // 
+        }
+        .am-list-item {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            padding-left: 0px;
+            height: .5rem;
+            line-height: .5rem;
+            text-align: center;
+            border-bottom: .01rem solid #f1f1f1;
+            .am-list-line {
+                padding: 0px;
+                &::after {
+                    height: 0px;
+                    content: none;
+                }
+                .am-list-content {
+                    text-align: center;
+                    font-size: 0.14rem;
+                    font-weight: 400;
+                }
+            }
+            &:last-child {
+                border: 0px;
+            }
+        }
+        .am-drawer-draghandle{
+            width: 0px!important;
+        }
+    }
+    .drawerNavContent {
+        position: relative;
+        box-sizing: border-box;
+        .mask {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 0.5rem;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .4);
+        }
+    }
+    .mixin() {
+        @width: 100%;
+    }
+    .caller {
+        .mixin();
+        width: @width;
+        height: @width * 3 / 4;
+    }
+}
+
+.barsIcon {
+    background: url(imageAssets/common/bar.png) no-repeat center center;
+    background-size: 100% auto;
+    display: block;
+    width: 0.28rem;
+    height: 0.28rem;
+}
+
+.searchIcon {
+    background: url(imageAssets/common/search.png) no-repeat center center;
+    background-size: 100% auto;
+    width: 0.38rem;
+    height: 0.38rem;
+}

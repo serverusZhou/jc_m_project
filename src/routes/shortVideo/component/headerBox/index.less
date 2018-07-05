@@ -1,0 +1,58 @@
+.headerBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, .8);
+  height: .8rem;
+  width: 100%;
+  .avatar {
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    margin-top: .1rem;
+    margin-left: .18rem;
+    float: left;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .nickName {
+    float: left;
+    margin-left: .15rem;
+    margin-top: .17rem;
+    width: 1.26rem;
+    height: .5rem;
+    .nick {
+      color: #FFBD00;
+      font-size: .15rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .text {
+      margin-top: .1rem;
+    }
+    .text::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  .gotoApp {
+    width: 1.14rem;
+    height: .38rem;
+    background: #FFBD00;
+    color: #FFF;
+    float: left;
+    margin-left: .2rem;
+    margin-top: .2rem;
+    border-radius: .05rem;
+    line-height: .38rem;
+    text-align: center;
+  }
+}
